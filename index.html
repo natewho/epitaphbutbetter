@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Delaware Court of Chancery Opinion Watch</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Delaware Court of Chancery</p>
+          <h1>Opinion Watch</h1>
+          <p class="subtitle">
+            Pull the latest opinions, summarize key details, and sort them into practice-ready categories like Section 220
+            demands or assignments for the benefit of creditors.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <button id="refresh" class="primary">Refresh opinions</button>
+          <p class="status" id="status">Ready to fetch the latest opinions.</p>
+        </div>
+      </header>
+
+      <section class="controls">
+        <label>
+          Search opinions
+          <input type="search" id="search" placeholder="Search by case name, keyword, or category" />
+        </label>
+        <label>
+          Category
+          <select id="category"></select>
+        </label>
+        <label>
+          Sort by
+          <select id="sort">
+            <option value="date-desc">Newest first</option>
+            <option value="date-asc">Oldest first</option>
+            <option value="title-asc">Title (A → Z)</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="summary" id="summary"></section>
+
+      <section class="opinions" id="opinions"></section>
+
+      <footer class="footer">
+        <p>
+          Data source: <a href="https://courts.delaware.gov/opinions/" target="_blank" rel="noreferrer">Delaware Courts Opinions</a>.
+          If the court site blocks browser access, the app will fall back to a curated sample set.
+        </p>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
